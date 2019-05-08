@@ -10,7 +10,7 @@ class ITTestAdmin(object):
     list_display = ['name', 'email', 'content', 'add_time']
     search_fields =  ['name', 'email']
     list_filter =  ['name', 'email', 'content', 'add_time']
-    add_form_template = 'ITtestapp/model_form.html'
+    add_form_template = 'index.html'
 
 
 xadmin.site.register(ITTest, ITTestAdmin)

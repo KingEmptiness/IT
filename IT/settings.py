@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/2.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
+# _*_ encoding:utf-8 _*_
 
 import os
 import sys
@@ -29,6 +30,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+#重载系统的用户，让UserProfile生效
+AUTH_USER_MODEL = 'Users.UserProfile'
 
 # Application definition
 
@@ -39,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'Users',
     'xadmin',
     'crispy_forms',
     'ITtestapp',
